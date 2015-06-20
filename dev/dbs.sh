@@ -6,7 +6,7 @@ pretty_print() {
   printf "\n%b\n" "$1"
 }
 
-pretty_print "Do you want to install MySQL?"
+pretty_print "Do you want to install MySQL? (y/n)"
 read -r response
 case $response in
   [yY])
@@ -17,7 +17,7 @@ case $response in
   *) break;;
 esac
 
-pretty_print "Do you want to install Postgres?"
+pretty_print "Do you want to install Postgres? (y/n)"
 read -r response
 case $response in
   [yY])
@@ -27,7 +27,7 @@ case $response in
   *) break;;
 esac
 
-pretty_print "Do you want to install MariaDB?"
+pretty_print "Do you want to install MariaDB? (y/n)"
 read -r response
 case $response in
   [yY])

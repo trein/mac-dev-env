@@ -6,7 +6,7 @@ pretty_print() {
   printf "\n%b\n" "$1"
 }
 
-pretty_print "Do you want to install NodeJS stuff?"
+pretty_print "Do you want to install NodeJS stuff? (y/n)"
 read -r response
 case $response in
   [yY])

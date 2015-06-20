@@ -34,6 +34,11 @@ dev_apps=(
   java
   vagrant
   iterm2
+  eclipse-ide
+  rubymine
+  pycharm-pro
+  android-studio
+  little-snitch
   qlcolorcode
   qlstephen
   qlmarkdown

@@ -62,6 +62,9 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 pretty_print "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
+pretty_print "Use all keyboard function keys (F1, F2, etc) as standard keys"
+defaults write NSGlobalDomain "com.apple.keyboard.fnState" "1"
+
 ###############################################################################
 # Finder
 ###############################################################################
