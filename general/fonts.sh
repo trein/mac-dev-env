@@ -1,5 +1,11 @@
-#!/bin/bash
-#Installing fonts
+#!/bin/sh
+###############################################################################
+# Installing fonts
+###############################################################################
+pretty_print() {
+  printf "\n%b\n" "$1"
+}
+
 pretty_print "Installing some caskroom/fonts..."
 brew tap caskroom/fonts
 
