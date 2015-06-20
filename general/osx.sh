@@ -41,8 +41,9 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 pretty_print "Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-pretty_print "Remove duplicates in the “Open With” menu (also see `lscleanup` alias)"
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+# ERROR
+# pretty_print "Remove duplicates in the “Open With” menu (also see `lscleanup` alias)"
+# /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 ################################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
@@ -100,7 +101,7 @@ case $response in
   *) break;;
 esac
 
-pretty_print"Avoid creation of .DS_Store files on network volumes? (y/n)"
+pretty_print "Avoid creation of .DS_Store files on network volumes? (y/n)"
 read -r response
 case $response in
   [yY])
@@ -117,12 +118,10 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 pretty_print "Show item info near icons on the desktop and in other icon views"
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
 pretty_print "Increase grid spacing for icons on the desktop and in other icon views"
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
 
 pretty_print "Allowing text selection in Quick Look/Preview in Finder by default"
@@ -130,7 +129,6 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 
 pretty_print "Enabling snap-to-grid for icons on the desktop and in other icon views"
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 pretty_print "Enabling the Develop menu and the Web Inspector in Safari"

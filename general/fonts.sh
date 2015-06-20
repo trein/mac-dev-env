@@ -15,7 +15,6 @@ fonts=(
   font-roboto
   font-open-sans
   font-source-sans-pro
-  font-lato
   font-alegreya
   font-montserrat
   font-inconsolata

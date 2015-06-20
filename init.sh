@@ -80,7 +80,7 @@ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 pretty_print "------------------------------"
 pretty_print "Installing development tools..."
 echo ""
-echo "Do you want to install development tools?"
+echo "Do you want to install development tools? (y/n)"
 read -r response
 case $response in
   [yY])

@@ -2,6 +2,9 @@
 ###############################################################################
 # OSX applications
 ###############################################################################
+pretty_print() {
+  printf "\n%b\n" "$1"
+}
 
 extra_apps=(
   screenflick
@@ -28,6 +31,7 @@ extra_apps=(
 )
 
 dev_apps=(
+  java
   vagrant
   iterm2
   qlcolorcode
