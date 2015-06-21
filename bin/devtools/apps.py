@@ -9,6 +9,7 @@ def install():
         'eclipse-jee',
         'rubymine',
         'pycharm',
+        'hex-fiend',
         'android-studio',
         'little-snitch',
         'qlcolorcode',
