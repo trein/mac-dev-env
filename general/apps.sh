@@ -28,8 +28,8 @@ pretty_print "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
 ###############################################################################
-# Transmission.app                                                            #
-###############################################################################pretty_print
+# Transmission.app
+###############################################################################
 pretty_print "Do you use Transmission for torrenting? (y/n)"
 read -r response
 case $response in

@@ -6,9 +6,6 @@ pretty_print() {
   printf "\n%b\n" "$1"
 }
 
-pretty_print "Installing some caskroom/fonts..."
-brew tap caskroom/fonts
-
 fonts=(
   font-m-plus
   font-clear-sans
@@ -27,5 +24,15 @@ fonts=(
 )
 
 # install fonts
-pretty_print "Installing the fonts..."
-brew cask install ${fonts[@]}
+pretty_print "Do you want to install additional fonts? (y/n)"
+read -r response
+case $response in
+  [yY])
+    pretty_print "Installing some caskroom/fonts..."
+    brew tap caskroom/fonts
+
+    pretty_print "Installing the fonts..."
+    brew cask install ${fonts[@]}
+    break;;
+  *) break;;
+esac
