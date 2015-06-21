@@ -58,6 +58,12 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 pretty_print "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 1
 
+pretty_print "Tap to click"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+pretty_print "Tap with two fingers to emulate right click"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+
 # Set a shorter Delay until key repeat
 pretty_print "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 12

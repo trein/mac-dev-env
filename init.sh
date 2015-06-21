@@ -46,28 +46,28 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # OSX customizations
 ###############################################################################
-pretty_print "------------------------------"
+pretty_print "----------------------------------------------------------------"
 pretty_print "Initializing OSX customizations..."
   sh general/osx.sh
 
 ###############################################################################
 # Homebrew installation
 ###############################################################################
-pretty_print "------------------------------"
+pretty_print "----------------------------------------------------------------"
 pretty_print "Installing homebrew..."
   sh general/brew.sh
 
 ###############################################################################
 # OSX useful fonts
 ###############################################################################
-pretty_print "------------------------------"
+pretty_print "----------------------------------------------------------------"
 pretty_print "Installing fonts..."
   sh general/fonts.sh
 
 ###############################################################################
 # OSX applications
 ###############################################################################
-pretty_print "------------------------------"
+pretty_print "----------------------------------------------------------------"
 pretty_print "Installing apps..."
   sh general/apps.sh
 
@@ -77,7 +77,7 @@ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 ###############################################################################
 # Development tools
 ###############################################################################
-pretty_print "------------------------------"
+pretty_print "----------------------------------------------------------------"
 pretty_print "Installing development tools..."
 echo ""
 echo "Do you want to install development tools? (y/n)"
@@ -98,7 +98,7 @@ esac
 ###############################################################################
 # Restoring apps settings
 ###############################################################################
-pretty_print "------------------------------"
+pretty_print "----------------------------------------------------------------"
 pretty_print "Restoring settings files..."
 # Install Mackup
 pretty_print "Installing Mackup..."
@@ -118,7 +118,7 @@ pretty_print "download chrome extensions, setup your hotspots/mouse settings, "
 pretty_print "and setup your git shit - look at readme for more info."
 echo ""
 echo ""
-pretty_print "################################################################################"
+pretty_print "----------------------------------------------------------------"
 echo ""
 echo ""
 pretty_print "Note that some of these changes require a logout/restart to take effect."
