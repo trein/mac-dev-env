@@ -125,9 +125,22 @@ pretty_print "Note that some of these changes require a logout/restart to take e
 pretty_print "Killing some open applications in order to take effect."
 echo ""
 
+apps=(
+  "Activity Monitor"
+  "Address Book"
+  "Calendar"
+  "Contacts"
+  "cfprefsd"
+  "Dock"
+  "Finder"
+  "Mail"
+  "Messages"
+  "Safari"
+  "SystemUIServer"
+  "Terminal"
+)
+
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
-for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-  "Terminal" "Transmission"; do
+for app in "${apps[@]}" do
   killall "${app}" > /dev/null 2>&1
 done
