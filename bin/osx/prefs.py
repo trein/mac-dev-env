@@ -97,6 +97,10 @@ def set_defaults():
     exec_cmd('defaults write com.apple.finder ShowMountedServersOnDesktop -bool true')
     exec_cmd('defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true')
 
+    info('Disable Mission Control and Application Windows keyboard shortcuts')
+    exec_cmd('defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 33 "{ enabled = 1; value = { parameters = (65535, 125, 262144); type = \'standard\'; }; }"')
+    exec_cmd('defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 34 "{ enabled = 1; value = { parameters = (65535, 126, 393216); type = \'standard\'; }; }"')
+
     info('Show item info near icons on the desktop and in other icon views')
     exec_cmd('/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist')
     exec_cmd('/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist')
