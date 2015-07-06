@@ -5,9 +5,19 @@ MDE (mac-dev-env)
 
 Before executing the script, please read through it and understand what it is doing.
 
-Executing script with Python. 
+Executing script with Python.
 
 	$ python init.py
+    usage: init.py [-h] [-d] [-v] [-m MODULES [MODULES ...]]
+
+    Setup an ideal mac development environment on a fresh install of OS X Yosemite
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -d, --d               debug run (default false)
+      -v, --verbose         verbose output (default false)
+      -m MODULES [MODULES ...], --modules MODULES [MODULES ...]
+                            modules to install (default all)
 
 ---
 

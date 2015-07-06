@@ -3,7 +3,7 @@ import src.main
 import logging
 
 
-def main():    
+def main():
     parser = argparse.ArgumentParser(description='Setup an ideal mac development environment on a fresh install of OS X Yosemite')
     parser.add_argument('-d', '--d', dest='debug', action='store_true', default=False, help='debug run (default false)')
     parser.add_argument('-v', '--verbose', dest='verbose', action='store_true', default=False, help='verbose output (default false)')
